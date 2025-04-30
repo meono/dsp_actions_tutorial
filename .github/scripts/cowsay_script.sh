@@ -4,4 +4,4 @@
 pip install cowsay
 
 # Use cowsay to say something
-cowsay "Hello from cowsay installed via pip!"
+cowsay -c cow -t "Hello from cowsay installed via pip!"
