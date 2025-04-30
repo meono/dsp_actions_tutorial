@@ -4,18 +4,26 @@ on:
   push:
 
 jobs:
-  cowsay-hey-there:
+  # cowsay-hey-there:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: install cowsay
+  #     run: pip install cowsay
+  #   - name: say things
+  #     run: cowsay -c cheese -t 'hey there'
+  # cowpy-hi-there:
+  #   runs-on: ubuntu-latest
+  #   steps:
+  #   - name: install cowpy
+  #     run: pip install cowpy
+  #   - name: say things
+  #     run: cowpy -c tux hi there
+  cowsay-on-script:
     runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: ./scripts
     steps:
-    - name: install cowsay
-      run: pip install cowsay
-    - name: say things
-      run: cowsay -c cheese -t 'hey there'
-  cowpy-hi-there:
-    runs-on: ubuntu-latest
-    steps:
-    - name: install cowpy
-      run: pip install cowpy
-    - name: say things
-      run: cowpy -c tux hi there
+    - name: use the script
+      run: ./cowsay_script.py
 
