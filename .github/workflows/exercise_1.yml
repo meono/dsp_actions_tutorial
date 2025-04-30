@@ -29,5 +29,5 @@ jobs:
       uses: actions/checkout@v4
     - name: use the script
       # run: .github/scripts/cowsay_script.py
-      run: ./cowsay_script.py
+      run: ./cowsay_script.sh
 
