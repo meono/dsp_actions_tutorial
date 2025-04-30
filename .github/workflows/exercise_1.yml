@@ -22,13 +22,12 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        # working-directory: .github/scripts
-        working-directory: .
+        working-directory: .github/scripts
+        # working-directory: .
     steps:
-    - name: pwd
-      run: pwd
-    - name: ls
-      run: ls
+    - name: checkout
+      uses: actions/checkout@v4
     - name: use the script
-      run: .github/scripts/cowsay_script.py
+      # run: .github/scripts/cowsay_script.py
+      run: ./cowsay_script.py
 
