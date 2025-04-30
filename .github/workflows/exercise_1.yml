@@ -24,6 +24,10 @@ jobs:
       run:
         working-directory: .github/scripts
     steps:
+    - name: pwd
+      run: pwd
+    - name: ls
+      run: ls
     - name: use the script
       run: ./cowsay_script.py
 
