@@ -27,6 +27,8 @@ jobs:
     steps:
     - name: checkout
       uses: actions/checkout@v4
+    - name: chmod
+      run: chmod +x ./cowsay_script.sh
     - name: use the script
       # run: .github/scripts/cowsay_script.py
       run: ./cowsay_script.sh
